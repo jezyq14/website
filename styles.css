@@ -1,0 +1,46 @@
+:root {
+    --background: #fdfcfd;
+    --foreground: #211f26;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --background: #121113;
+        --foreground: #eeeef0;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: monospace;
+}
+
+main {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+.under-construction {
+    width: 29ch;
+    animation: typing 3.5s steps(29), blink 0.7s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 2em;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
