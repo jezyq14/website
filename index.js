@@ -1,10 +1,16 @@
 function $(selector) {
-  return document.querySelector(selector);
+    return document.querySelector(selector);
 }
 
-const underConstructionText = $(".under-construction"); 
+const underConstructionText = $(".under-construction");
+const socials = $(".socials");
 
 setTimeout(() => {
     underConstructionText.style.animation = "inherit";
     underConstructionText.style.border = "none";
-}, 3500)
+
+    setTimeout(() => {
+        socials.style.opacity = "1";
+        socials.style.transform = "translateY(0)";
+    }, 300);
+}, 3500);

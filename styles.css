@@ -20,8 +20,11 @@ body {
 
 main {
     min-height: 100dvh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .under-construction {
@@ -30,12 +33,34 @@ main {
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-    font-size: 2em;
+    font-size: 3em;
+}
+
+.socials {
+    display: flex;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    gap: 1.5rem;
+}
+
+svg {
+    width: 48px;
+    height: 48px;
 }
 
 @media screen and (max-width: 500px) {
     .under-construction {
         font-size: 1.5em;
+    }
+
+    svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .socials {
+        gap: 1rem;
     }
 }
 
