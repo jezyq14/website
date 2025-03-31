@@ -166,6 +166,6 @@ svg {
 
 @keyframes y {
     100% {
-        transform: translateY(calc(100vh - var(--size)));
+        transform: translateY(calc(100dvh - var(--size)));
     }
 }
