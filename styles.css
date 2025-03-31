@@ -30,8 +30,8 @@ main {
 }
 
 .under-construction {
-    width: 29ch;
-    animation: typing 3.5s steps(29), blink 0.7s step-end infinite alternate;
+    width: 25ch;
+    animation: typing 3.5s steps(25), blink 0.7s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -79,6 +79,26 @@ svg {
 }
 
 /* April fools */
+.af {
+    min-height: 100dvh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+
+    transition: display 1s ease-out;
+
+    cursor: pointer;
+}
+
+.af h1 {
+    color: var(--foreground);
+    opacity: 0.8;
+
+    font-size: 3em;
+}
+
 .x,
 .y {
     width: var(--size);

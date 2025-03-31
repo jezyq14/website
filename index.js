@@ -13,9 +13,19 @@ setTimeout(() => {
         socials.style.opacity = "1";
         socials.style.transform = "translateY(0)";
     }, 300);
+
+    setTimeout(() => {
+        $("main").style.display = "none";
+        const af = $(".af");
+
+        af.style.display = "flex";
+        af.onclick = () => {
+            aprilFools();
+        };
+    }, 2000);
 }, 3500);
 
-setTimeout(() => {
+const aprilFools = () => {
     new Audio("audio.ogg").play();
     const body = $("body");
 
@@ -25,4 +35,4 @@ setTimeout(() => {
     body.style.animation = "rainbow 18s ease infinite";
 
     body.innerHTML = `<div class="x"><img class="y" src="rick.gif" alt="Rick Roll"></div>`;
-}, 5000);
+};
