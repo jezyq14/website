@@ -1,6 +1,8 @@
 :root {
     --background: #fdfcfd;
     --foreground: #211f26;
+
+    --size: 300px;
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -73,5 +75,77 @@ svg {
 @keyframes blink {
     50% {
         border-color: transparent;
+    }
+}
+
+/* April fools */
+.x,
+.y {
+    width: var(--size);
+    height: var(--size);
+}
+
+.x {
+    animation: x 13s linear infinite alternate;
+}
+
+.y {
+    animation: y 7s linear infinite alternate;
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+
+@keyframes x {
+    100% {
+        transform: translateX(calc(100vw - var(--size)));
+    }
+}
+
+@keyframes y {
+    100% {
+        transform: translateY(calc(100vh - var(--size)));
     }
 }

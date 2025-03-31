@@ -14,3 +14,15 @@ setTimeout(() => {
         socials.style.transform = "translateY(0)";
     }, 300);
 }, 3500);
+
+setTimeout(() => {
+    new Audio("audio.ogg").play();
+    const body = $("body");
+
+    body.style.background =
+        "linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3)";
+    body.style.backgroundSize = "1800% 1800%";
+    body.style.animation = "rainbow 18s ease infinite";
+
+    body.innerHTML = `<div class="x"><img class="y" src="rick.gif" alt="Rick Roll"></div>`;
+}, 5000);
